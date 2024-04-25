@@ -1,8 +1,9 @@
+import Header from "./components/pages/Header/Header"
 
 const App = () => {
   return(
     <>
-     <h1>Hola</h1>
+      <Header />
     </>
   )
 }
