@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import TopPanelUp from './Details/TopPanel/TopPanelUp'
+import PanelNavigate from './Details/Nav/PanelNavigate'
 
 
 const Header = () => {
 
-    
+
     return (
         <HeaderBoddy>
 
@@ -13,24 +14,8 @@ const Header = () => {
             <TopPanelUp />
 
             {/*Modulo: Logo, nav */}
-            <PanelNav>
-                <div className='boddy__logo'>
-                    <div className='box__logo'>
-                        <img src="/images/logos/ico_web_250x250.png" alt="Logo" />
-                    </div>
-                    
-                </div>
-                {/* <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Contacts</li>
-                    </ul>
-                </nav> */}
-            </PanelNav>
+            <PanelNavigate />
+            
         </HeaderBoddy>
     )
 }
@@ -38,11 +23,8 @@ const Header = () => {
 export default Header
 
 const HeaderBoddy = styled.header`
+    max-width: 1300px;
+    margin: 0 auto;
     
 `
-const PanelNav = styled.div`
-    display: flex;
 
-
-
-`

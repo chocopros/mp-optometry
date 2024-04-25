@@ -30,6 +30,7 @@ export default TopPanelUp
 
 const TopPanel = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     height: 50px;
@@ -40,6 +41,7 @@ const TopPanel = styled.div`
 
     .info_panel__contact {
         display: flex;
+        flex-wrap: wrap;
         gap: 0 30px;
 
         .maito__email{
@@ -62,5 +64,10 @@ const TopPanel = styled.div`
                 scale: 1.25;
             }
         }
+    }
+
+    @media (max-width: 640px) {
+        /* Estilos para pantallas de hasta 640px */
+        display: none;
     }
 `
