@@ -17,21 +17,21 @@ const ScopeServices = () => {
             />
 
             <CardServices
-                iconUrl="/images/Services_home/lupa.png"
+                iconUrl="/images/Services_home/lentes2.png"
                 title="Comprehensive Eye Exams"
-                textDescription="We stick to a complete and full oculat examination process with every patient, every time."
+                textDescription="Provided is a huge spectr of services, including hand-picked designer frames and glasses."
             />
 
             <CardServices
-                iconUrl="/images/Services_home/lupa.png"
+                iconUrl="/images/Services_home/contactlens.png"
                 title="Comprehensive Eye Exams"
-                textDescription="We stick to a complete and full oculat examination process with every patient, every time."
+                textDescription="Effective and immediate assistance with getting the perfect pair of high quality eye lens."
             />
 
             <CardServices
-                iconUrl="/images/Services_home/lupa.png"
+                iconUrl="/images/Services_home/focus.png"
                 title="Comprehensive Eye Exams"
-                textDescription="We stick to a complete and full oculat examination process with every patient, every time."
+                textDescription="Itchy red eyes? Had an accident? Slept in your contacts last night? We will fix everything!"
             />
 
         </section>
