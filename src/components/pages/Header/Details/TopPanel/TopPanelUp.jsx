@@ -66,7 +66,7 @@ const TopPanel = styled.div`
         }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 668px) {
         /* Estilos para pantallas de hasta 640px */
         display: none;
     }

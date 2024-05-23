@@ -25,6 +25,5 @@ export default Header
 const HeaderBoddy = styled.header`
     max-width: 1300px;
     margin: 0 auto;
-    
 `
 

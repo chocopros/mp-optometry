@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { FaBars, FaTimes } from "react-icons/fa"
+
 
 
 const PanelNavigate = () => {
+
+    const navRef = useRef();
+
+    const showNavbar = () => {
+        navRef.current.classList.toggle("responsive_nav");
+    };
+
     return (
-        <PanelNav>
+        <NavBar>
+
             <div className='boddy__logo'>
                 <div className='box__logo'>
                     <img src="/images/logos/ico_web_250x250.png" alt="Logo" />
@@ -16,30 +26,47 @@ const PanelNavigate = () => {
                 </div>
 
             </div>
-            <nav className='nav__boddy'>
-                <ul className='list__nav'>
-                    
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/About'>About</Link></li>
-                    <li><Link to='/services'>Services</Link></li>
-                    <li><Link to='/shop'>Shop</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/contacts'>Contacts</Link></li>
-                    
-                </ul>
+
+
+            <nav ref={navRef}>
+
+                <Link to='/'>Home</Link>
+                <Link to='/About'>About</Link>
+                <Link to='/services'>Services</Link>
+                <Link to='/shop'>Shop</Link>
+                <Link to='/blog'>Blog</Link>
+                <Link to='/contacts'>Contacts</Link>
+
+                <button
+                    onClick={showNavbar}
+                    className='nav-btn nav-close-btn'
+                >
+                    <FaTimes />
+                </button>
+
             </nav>
-        </PanelNav>
+            <button
+                onClick={showNavbar}
+                className='nav-btn nav-close-btn'
+            >
+                <FaBars />
+            </button>
+        </NavBar>
     )
 }
 
 export default PanelNavigate
 
-const PanelNav = styled.div`
+const NavBar = styled.header`
     display: flex;
-    justify-content: space-around;
-    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
 
-    
+    /* LOGO CODE */
     /* Todo lo referente al LOGO */
     .boddy__logo{
         display: flex;
@@ -66,23 +93,68 @@ const PanelNav = styled.div`
         }
     }
 
-    /* Todo lo referente al menu de navegacion principal panel */
-    .nav__boddy{
-        display: flex;
-        align-items: center;
-        
-        ul{
-            display: flex;
-            gap: 0 10px;
-            list-style: none;
 
-            a{
-                text-decoration: none;
-                text-transform: capitalize;
-                font-weight: 700 ;
-                color: #8a8a8a;
-            }
+    /* NAVBAR CODE */
+    nav a{
+        margin: 0 2rem;
+        color: var(--textColor);
+        text-decoration: none;
+    }
+
+    nav a:hover{
+        color: var(--secondaryColor)
+    }
+
+    .nav-btn{
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: var(--textColor);
+        visibility: hidden;
+        opacity: 0;
+        font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: 1024px){
+        .nav-btn {
+            visibility: visible;
+            opacity: 1;
         }
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            background-color: var(--mainColor);
+            transition: 1s;
+            transform: translateY(-100vh);
+        }
+
+        .responsive_nav{
+            transform: none;
+
+        }
+
+        nav .nav-close-btn{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        nav a {
+            font-size: 3.5rem;
+        }
+
+    
     }
 
 `
