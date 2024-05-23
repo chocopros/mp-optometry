@@ -37,7 +37,7 @@ const HeroSection = styled.section`
         left: 55%;
         color: #ffffff;
         font-weight: 700;
-        font-size: 35px
+        font-size: clamp(18px, 5vw, 50px);;
     }
   
     
