@@ -30,12 +30,12 @@ const PanelNavigate = () => {
 
             <nav ref={navRef}>
 
-                <Link to='/'>Home</Link>
-                <Link to='/About'>About</Link>
-                <Link to='/services'>Services</Link>
-                <Link to='/shop'>Shop</Link>
-                <Link to='/blog'>Blog</Link>
-                <Link to='/contacts'>Contacts</Link>
+                <Link to='/' onClick={showNavbar}>Home</Link>
+                <Link to='/About' onClick={showNavbar}>About</Link>
+                <Link to='/services' onClick={showNavbar}>Services</Link>
+                <Link to='/shop' onClick={showNavbar}>Shop</Link>
+                <Link to='/blog' onClick={showNavbar}>Blog</Link>
+                <Link to='/contacts' onClick={showNavbar}>Contacts</Link>
 
                 <button
                     onClick={showNavbar}
