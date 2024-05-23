@@ -21,23 +21,13 @@ export default HeroPrincipal
 
 const HeroSection = styled.section`
     display: flex;
-    position: relative;
-
+    justify-content: center;
+    align-items: center;
     height: 75vh;
-  
-    background-image: url('/images/Hero/optometry.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: calc(100vw) calc(100vh);
 
-
-    .title__hero {
+    .title__hero{
         
-        font-size: 35px;
-        color: white;
-        position: absolute;
-        bottom: 50%;
-        left: 15%;
     }
+  
     
 `

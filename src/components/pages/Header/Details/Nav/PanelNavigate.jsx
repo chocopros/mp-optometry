@@ -65,6 +65,7 @@ const NavBar = styled.header`
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
+    z-index: 10;
 
     /* LOGO CODE */
     /* Todo lo referente al LOGO */
