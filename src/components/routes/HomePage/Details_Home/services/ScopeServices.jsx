@@ -49,7 +49,7 @@ const SectionScopeServices = styled.section`
     gap: 30px 0;
 
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 100px auto;
 
     .details_services{
         text-align: center;

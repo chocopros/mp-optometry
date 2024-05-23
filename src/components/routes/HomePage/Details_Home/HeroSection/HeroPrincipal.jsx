@@ -24,9 +24,20 @@ const HeroSection = styled.section`
     justify-content: center;
     align-items: center;
     height: 75vh;
+    position: relative;
+
+    background-image: url(/images/Hero/optometry.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 
     .title__hero{
-        
+        position: absolute;
+        left: 55%;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 35px
     }
   
     
