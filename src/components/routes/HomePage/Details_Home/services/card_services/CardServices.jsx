@@ -21,14 +21,17 @@ const CardService = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 430px;
+    height: 400px;
     max-width: 270px;
     gap: 30px 0;
-    
     padding: 30px;
-
     border: 1px #d6d6d6 solid;
     border-radius: 10px;
+    transition: 400ms ease;
+
+    &:hover {
+        transform: scale(1.10)
+    }
 
     h3{
         font-size: 22px;
@@ -37,8 +40,10 @@ const CardService = styled.article`
 
     p{
         color: #9b9b9b;
-        font-size: 18px ;
+        font-size: 14px ;
         text-align: center;
+        height: 51px;
+        overflow-wrap: break-word;
     }
     
     .container__icon{
